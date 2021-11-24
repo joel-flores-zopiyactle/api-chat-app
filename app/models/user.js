@@ -23,7 +23,7 @@ const UserSchema = new mongoose.Schema({
   });
 
   UserSchema.methods.setImagen = function setImagen(fileName) {
-    this.imagen = `${config.HOST}public/${fileName}`; //:${config.PORT}
+    this.imagen = `${config.HOST}/public/${fileName}`; //:${config.PORT}
   }
 
   module.exports = mongoose.model('usuario', UserSchema)
